@@ -129,7 +129,7 @@ PRESETS_HW_ACCEL_SCALE = {
     FFMPEG_HWACCEL_RKMPP: "-r {0} -vf scale_rkrga=w={1}:h={2}:format=yuv420p:force_original_aspect_ratio=0,hwmap=mode=read,format=yuv420p",
     "default": "-r {0} -vf fps={0},scale={1}:{2}",
     # experimental presets
-    FFMPEG_HWACCEL_VULKAN: "-r {0} -vf fps={0},hwupload,scale_vulkan=w={1}:h={2},hwdownload",
+    FFMPEG_HWACCEL_VULKAN: "-r {0} -vf fps={0},scale_vulkan=w={1}:h={2},hwdownload,format=nv12",
     FFMPEG_HWACCEL_AMF: "-r {0} -vf fps={0},hwupload,scale_amf=w={1}:h={2},hwdownload",
 }
 PRESETS_HW_ACCEL_SCALE["preset-nvidia-h264"] = PRESETS_HW_ACCEL_SCALE[
